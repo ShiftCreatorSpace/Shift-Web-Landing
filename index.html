@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta property="og:image" content="img/logo.png"/>
+    <meta property="og:title" content="Shift | creator space"/>
+    <meta property="og:url" content="http://creatorspace.co"/>
+    <meta property="og:site_name" content="Shift | creator space"/>
+    <meta name="og:description" content="Shift | creator space" />
+    <meta name="keywords" content="shift creator space creators co-op" />
+    <meta property="og:type" content="website"/>
+
+    <title>Shift | creator space</title>
+
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="css/normalize.css" type="text/css" />
+    <link rel="stylesheet" href="css/responsive.css" type="text/css" />
+    <link rel="stylesheet" href="css/font.css" type="text/css" />
+    <link rel="stylesheet" href="slick/slick.css" type="text/css" />
+    
+    <link rel="shortcut icon" href="img/logo.png" type="image/png" />
+
+    <script src="js/jquery-1.9.1.min.js" type="text/javascript" ></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('body').hide();
+
+            if (document.referrer == 'http://creators.coop') {
+                $('#creators').css("display","inline-block");
+                $('body').fadeIn({duration:2000,easing:"swing"});
+                $('#creators').delay(2400).fadeOut({duration:1000,easing:"swing"});
+                $('#shift').delay(3400).fadeIn({duration:1000,easing:"swing"});
+            } else {
+                $('#shift').css("display","inline-block");
+                $('body').fadeIn({duration:2000,easing:"swing"});
+            }
+        });
+    </script>
+    <script>
+        $(document).ready(function (){
+            $("#apply").click(function (){
+                //$(this).animate(function(){
+                    $('html, body').animate({
+                        scrollTop: $("#checklist").offset().top + 2
+                    }, 500);
+                //});
+            });
+        });
+    </script>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvQN_LdwTe1_dTIbzrvmn4Ia2f1wf232c">
+    </script>
+    <script type="text/javascript">
+      function initialize() {
+        var shiftLatlng = new google.maps.LatLng(42.273898, -83.725722);
+        var mapOptions = {
+          center: shiftLatlng,
+          zoom: 16,
+          scrollwheel: false // disableScrollingWithMouseWheel as default
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);
+        var contentString = '<div id="description">'+
+          '<div id="siteNotice">'+
+          '</div>'+
+          '<div id="map-heading">Shift | creator space</div>'+
+          '<div id="map-content">'+
+          '<p><b>631 Oxford Road</b></br>'+
+          'Ann Arbor, MI 48104</p>'+
+          '</div>'+
+          '</div>';
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+        var marker = new google.maps.Marker({
+            position: shiftLatlng,
+            map: map,
+            title: 'Shift | creator space'
+        });
+        infowindow.open(map,marker);
+        google.maps.event.addListener(marker, 'click', function() {
+            infowindow.open(map,marker);
+        });
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+</head>
+
+<body>
+    <section id="landing">
+        <div class="content">
+            <div id="creators">        
+                <div id="logo"><img src="img/logo_creators.png"/></div>
+                <h3>is now</h3>
+            </div>
+            <div id="shift">
+                <h1>Shift</h1>
+                <h2>creator space</h2>
+                <div id="title">a collaborative space and program for curious creators</div>
+                <form action="https://docs.google.com/a/umich.edu/forms/d/1TONApqDBu04eJA8rabb35wEOA5Z7FlZw5eKrA7V13tw/formResponse" method="POST" id="ss-form" target="_blank" onsubmit=""><ol role="list" class="ss-question-list" style="padding-left: 0">
+                <div class="ss-form-question errorbox-good" role="listitem">
+                <div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry">
+                <input type="text" name="entry.658166001" value="@umich.edu" class="ss-q-short" id="entry_658166001" dir="auto" aria-label="Email  " title=""  autocomplete="off">
+                <div class="error-message" id="1984131622_errorMessage"></div></div></div></div>
+                <input type="hidden" name="draftResponse" value="[,,&quot;-3367506305047296338&quot;]
+                "><input type="hidden" name="pageHistory" value="0">
+                <input type="hidden" name="fbzx" value="-3367506305047296338">
+                <div class="ss-item ss-navigate"><table id="navigation-table"><tbody><tr><td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
+                <input type="submit" name="submit" value="" id="ss-submit" class="jfk-button jfk-button-action " ></td>
+                </tr></tbody></table></div></ol></form>
+                <!--<button id="apply">Apply</button>-->
+            </div>
+        </div>
+    </section>
+    <section id="mission">        
+        <div class="content">
+            <h3></h3>
+            <p>There is a wonderstruck child in all of us.</br>
+            The bold, spontaneous, forever curious one</br>
+            that built worlds in sandboxes.</p>
+
+            <p>Yet every day, “do this, don’t do that” happens.</br>
+            We’re told to play it safe and strive for stability.</br>
+            But progress never sits still.</p>
+
+            <p>That’s where Shift comes in.</br>
+            This is the creator space where you can explore,</br>
+            for yourself and for others.</p>
+
+            <p>So come and discover your knack, develop your craft.</br>
+            Release your inner child and go wild.</br>
+            Let’s break the rules. Let’s be tremendous.</p>
+        </div>
+    </section>
+    <section id="haus">
+        <div id="map-image"></div>    
+        <div id="map-canvas"></div>    
+    </section>
+    <section id="perks">
+        <div class="content">
+            <h3>Creator Benefits</h3>
+            <ul>
+                <li><div id="clock"></div>24/7 access to our space. Wifi, food & drink all day, everyday.</li>
+                <li><div id="event"></div>Exclusive access to speakers, workshops, and other events.</li>
+                <li><div id="job"></div>Fast-track for internship and job opportunities.</li>
+                <li><div id="community"></div>A tight-knit community of people just as crazy as you are.</li>
+            </ul>
+        </div>
+    </section>
+    <section id="checklist">
+        <div class="content">
+            <h3>The Application Process</h3>
+            <ol>
+                <li><div id="space">1. Come participate in Creative Sprints at</br> two of the four Open Houses listed below:</div>
+                    <div id="openhouse">
+                        <div class="left">
+                            <div class="date">Tue, Sept 9, 6pm – 9pm</div>
+                            <div id="asterisk">Open House only, no Creative Sprint</div>
+                            <div class="date">Sun, Sept 21, 2pm – 6pm</div>
+                        </div>
+                        <div class="right">
+                            <div class="date">Sun, Sept 28, 2pm – 6pm</div>
+                            <div class="date">Sun, Oct 5, 2pm – 6pm</div>
+                        </div>
+                    </div></br>
+                </li>
+                <li>2. Join us for a midweek chat</li>
+                <li>3. Fill out the application anytime!</li>
+            </ol>
+        </div>
+    </section>
+
+    <section id="application">
+        <div id="form">
+            <form action="https://docs.google.com/a/umich.edu/forms/d/17gk7Lo000ScuS7bXLho6FreCmtyfWYLYMMqbsnZ-xDs/formResponse" method="POST" id="ss-form" target="_self" onsubmit=""><ol role="list" class="ss-question-list" style="padding-left: 0">
+            <div class="errorbox-good" role="listitem">
+            <div dir="ltr" class="ss-item  ss-section-header"><div class="ss-form-entry">
+            <h3 class="ss-section-title">Part I: Background</h3>
+            <div class="ss-section-description ss-no-ignore-whitespace"></div>
+            </div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+            <div dir="ltr" class="ss-item ss-item-required ss-text"><div class="ss-form-entry">
+            <label class="ss-q-item-label" for="entry_936004010"><div class="ss-q-title">Name
+            <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+            <span class="ss-required-asterisk">*</span></div>
+            <div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+            <input type="text" name="entry.936004010" value="" class="ss-q-short" id="entry_936004010" dir="auto" aria-label="Name  " aria-required="true" required="" title="">
+            <div class="error-message" id="1388375507_errorMessage"></div>
+            <div class="required-message">This is a required question</div>
+            </div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+            <div dir="ltr" class="ss-item ss-item-required ss-text"><div class="ss-form-entry">
+            <label class="ss-q-item-label" for="entry_867885491"><div class="ss-q-title">Graduation Year
+            <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+            <span class="ss-required-asterisk">*</span></div>
+            <div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+            <input type="text" name="entry.867885491" value="" class="ss-q-short" id="entry_867885491" dir="auto" aria-label="Graduation Year  " aria-required="true" required="" title="">
+            <div class="error-message" id="501164006_errorMessage"></div>
+            <div class="required-message">This is a required question</div>
+            </div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+            <div dir="ltr" class="ss-item ss-item-required ss-text"><div class="ss-form-entry">
+            <label class="ss-q-item-label" for="entry_1081123808"><div class="ss-q-title">Major
+            <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+            <span class="ss-required-asterisk">*</span></div>
+            <div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+            <input type="text" name="entry.1081123808" value="" class="ss-q-short" id="entry_1081123808" dir="auto" aria-label="Major  " aria-required="true" required="" title="">
+            <div class="error-message" id="800385825_errorMessage"></div>
+            <div class="required-message">This is a required question</div>
+            </div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+            <div dir="ltr" class="ss-item ss-item-required ss-radio"><div class="ss-form-entry">
+            <label class="ss-q-item-label" for="entry_330586481"><div class="ss-q-title">T-shirt Size
+            <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+            <span class="ss-required-asterisk">*</span></div>
+            <div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+
+            <ul class="ss-choices" role="radiogroup" aria-label="T-shirt Size  "><li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.2055157035" value="X-Small" id="group_2055157035_1" role="radio" class="ss-q-radio" aria-label="X-Small" required="" aria-required="true"></span>
+            <span class="ss-choice-label">X-Small</span>
+            </label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.2055157035" value="Small" id="group_2055157035_2" role="radio" class="ss-q-radio" aria-label="Small" required="" aria-required="true"></span>
+            <span class="ss-choice-label">Small</span>
+            </label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.2055157035" value="Medium" id="group_2055157035_3" role="radio" class="ss-q-radio" aria-label="Medium" required="" aria-required="true"></span>
+            <span class="ss-choice-label">Medium</span>
+            </label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.2055157035" value="Large" id="group_2055157035_4" role="radio" class="ss-q-radio" aria-label="Large" required="" aria-required="true"></span>
+            <span class="ss-choice-label">Large</span>
+            </label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.2055157035" value="X-Large" id="group_2055157035_5" role="radio" class="ss-q-radio" aria-label="X-Large" required="" aria-required="true"></span>
+            <span class="ss-choice-label">X-Large</span>
+            </label></li></ul>
+            <div class="error-message" id="330586481_errorMessage"></div>
+            <div class="required-message">This is a required question</div></div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+            <div dir="ltr" class="ss-item ss-item-required ss-text"><div class="ss-form-entry">
+            <label class="ss-q-item-label" for="entry_955553552"><div class="ss-q-title">Dietary Restrictions
+            <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+            <span class="ss-required-asterisk">*</span></div>
+            <div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+            <input type="text" name="entry.955553552" value="" class="ss-q-short" id="entry_955553552" dir="auto" aria-label="Dietary Restrictions  " aria-required="true" required="" title="">
+            <div class="error-message" id="1818342557_errorMessage"></div>
+            <div class="required-message">This is a required question</div>
+            </div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+            <div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry">
+            <label class="ss-q-item-label" for="entry_2029176271"><div class="ss-q-title">Online Portfolio
+            </div>
+            <div class="ss-q-help ss-secondary-text" dir="ltr">Personal Website/Blog, Dribbble, Github,  LinkedIn, etc.</div></label>
+            <input type="text" name="entry.2029176271" value="" class="ss-q-short" id="entry_2029176271" dir="auto" aria-label="Online Portfolio Personal Website/Blog, Dribbble, Github,  LinkedIn, etc. " title="">
+            <div class="error-message" id="1943595290_errorMessage"></div>
+            <div class="required-message">This is a required question</div>
+            </div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+            <div dir="ltr" class="ss-item ss-item-required ss-text"><div class="ss-form-entry">
+            <label class="ss-q-item-label" for="entry_313205467"><div class="ss-q-title">How heavy is your workload? 
+            <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+            <span class="ss-required-asterisk">*</span></div>
+            <div class="ss-q-help ss-secondary-text" dir="ltr">What are you (planning on being) involved in?</div></label>
+            <input type="text" name="entry.313205467" value="" class="ss-q-short" id="entry_313205467" dir="auto" aria-label="How heavy is your workload?  What are you (planning on being) involved in? " aria-required="true" required="" title="">
+            <div class="error-message" id="159946473_errorMessage"></div>
+            <div class="required-message">This is a required question</div>
+            </div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+            <div dir="ltr" class="ss-item ss-item-required ss-text"><div class="ss-form-entry">
+            <label class="ss-q-item-label" for="entry_1749513893"><div class="ss-q-title">Are you currently working on something?
+            <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+            <span class="ss-required-asterisk">*</span></div>
+            <div class="ss-q-help ss-secondary-text" dir="ltr">If yes, what? List any team members.</div></label>
+            <input type="text" name="entry.1749513893" value="" class="ss-q-short" id="entry_1749513893" dir="auto" aria-label="Are you currently working on something? If yes, what? List any team members. " aria-required="true" required="" title="">
+            <div class="error-message" id="823943704_errorMessage"></div>
+            <div class="required-message">This is a required question</div>
+            </div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+            <div dir="ltr" class="ss-item ss-item-required ss-text"><div class="ss-form-entry">
+            <label class="ss-q-item-label" for="entry_1890223352"><div class="ss-q-title">How did you hear about us?
+            <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+            <span class="ss-required-asterisk">*</span></div>
+            <div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+            <input type="text" name="entry.1890223352" value="" class="ss-q-short" id="entry_1890223352" dir="auto" aria-label="How did you hear about us?  " aria-required="true" required="" title="">
+            <div class="error-message" id="1613221752_errorMessage"></div>
+            <div class="required-message">This is a required question</div>
+            </div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+            <div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry">
+            <label class="ss-q-item-label" for="entry_645506934"><div class="ss-q-title">Any friends that would be curious about Shift? Let us know!
+            </div>
+            <div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+            <input type="text" name="entry.645506934" value="" class="ss-q-short" id="entry_645506934" dir="auto" aria-label="Any friends that would be curious about Shift? Let us know!  " title="">
+            <div class="error-message" id="1110765502_errorMessage"></div>
+            <div class="required-message">This is a required question</div>
+            </div></div></div> <div class="errorbox-good" role="listitem">
+            <div dir="ltr" class="ss-item  ss-section-header"><div class="ss-form-entry">
+            <h3 class="ss-section-title">Part II: The Fun Stuff</h3>
+            <div class="ss-section-description ss-no-ignore-whitespace"></div>
+            </div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+            <div dir="ltr" class="ss-item ss-item-required ss-paragraph-text"><div class="ss-form-entry">
+            <label class="ss-q-item-label" for="entry_2145953416"><div class="ss-q-title">What is one thing that you are proud of building?
+            <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+            <span class="ss-required-asterisk">*</span></div>
+            <div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+            <textarea name="entry.2145953416" rows="8" cols="0" class="ss-q-long" id="entry_2145953416" dir="auto" aria-label="What is one thing that you are proud of building?  " aria-required="true" required=""></textarea>
+            <div class="error-message" id="31514967_errorMessage"></div>
+            <div class="required-message">This is a required question</div>
+            </div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+            <div dir="ltr" class="ss-item ss-item-required ss-paragraph-text"><div class="ss-form-entry">
+            <label class="ss-q-item-label" for="entry_1254739758"><div class="ss-q-title">Creating something that matters isn’t sunshine and rainbows every day. When have you shown considerable grit?
+            <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+            <span class="ss-required-asterisk">*</span></div>
+            <div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+            <textarea name="entry.1254739758" rows="8" cols="0" class="ss-q-long" id="entry_1254739758" dir="auto" aria-label="Creating something that matters isn’t sunshine and rainbows every day. When have you shown considerable grit?  " aria-required="true" required=""></textarea>
+            <div class="error-message" id="1641259004_errorMessage"></div>
+            <div class="required-message">This is a required question</div>
+            </div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+            <div dir="ltr" class="ss-item ss-item-required ss-paragraph-text"><div class="ss-form-entry">
+            <label class="ss-q-item-label" for="entry_1203498466"><div class="ss-q-title">What is your most marked characteristic?
+            <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+            <span class="ss-required-asterisk">*</span></div>
+            <div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+            <textarea name="entry.1203498466" rows="8" cols="0" class="ss-q-long" id="entry_1203498466" dir="auto" aria-label="What is your most marked characteristic?  " aria-required="true" required=""></textarea>
+            <div class="error-message" id="757730414_errorMessage"></div>
+            <div class="required-message">This is a required question</div>
+            </div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+            <div dir="ltr" class="ss-item ss-item-required ss-paragraph-text"><div class="ss-form-entry">
+            <label class="ss-q-item-label" for="entry_1856882002"><div class="ss-q-title">What is an ideal day for you? 
+            <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+            <span class="ss-required-asterisk">*</span></div>
+            <div class="ss-q-help ss-secondary-text" dir="ltr">Not a vacation day, but the best normal day. </div></label>
+            <textarea name="entry.1856882002" rows="8" cols="0" class="ss-q-long" id="entry_1856882002" dir="auto" aria-label="What is an ideal day for you?  Not a vacation day, but the best normal day.  " aria-required="true" required=""></textarea>
+            <div class="error-message" id="156644396_errorMessage"></div>
+            <div class="required-message">This is a required question</div>
+            </div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+            <div dir="ltr" class="ss-item ss-item-required ss-paragraph-text"><div class="ss-form-entry">
+            <label class="ss-q-item-label" for="entry_954093860"><div class="ss-q-title">It’s the last day, what have you accomplished and how have you grown?
+            <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+            <span class="ss-required-asterisk">*</span></div>
+            <div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+            <textarea name="entry.954093860" rows="8" cols="0" class="ss-q-long" id="entry_954093860" dir="auto" aria-label="It’s the last day, what have you accomplished and how have you grown?  " aria-required="true" required=""></textarea>
+            <div class="error-message" id="652877446_errorMessage"></div>
+            <div class="required-message">This is a required question</div>
+            </div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+            <div dir="ltr" class="ss-item ss-item-required ss-paragraph-text"><div class="ss-form-entry">
+            <label class="ss-q-item-label" for="entry_1967775486"><div class="ss-q-title">What are you curious about?
+            <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+            <span class="ss-required-asterisk">*</span></div>
+            <div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+            <textarea name="entry.1967775486" rows="8" cols="0" class="ss-q-long" id="entry_1967775486" dir="auto" aria-label="What are you curious about?  " aria-required="true" required=""></textarea>
+            <div class="error-message" id="686540291_errorMessage"></div>
+            <div class="required-message">This is a required question</div>
+            </div></div></div>
+            <input type="hidden" name="draftResponse" value="[,,&quot;6143120027491391353&quot;]
+            "><input type="hidden" name="pageHistory" value="0">
+            <input type="hidden" name="fbzx" value="6143120027491391353">
+            <div class="ss-item ss-navigate"><table id="navigation-table"><tbody><tr><td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr"><input type="submit" name="submit" value="Apply" id="ss-submit"></td></tr></tbody></table></div></ol></form>
+        </div> <!-- END FORM -->
+        <div id="questions">Questions? Contact <a href="mailto:shift@creatorspace.co">shift@creatorspace.co</a></div>
+        <div id="copyright">&copy; 2014 Shift | creator space</div>
+    </section>
+</body>
+</html>
