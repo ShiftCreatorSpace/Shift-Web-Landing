@@ -17,10 +17,12 @@
     <link rel="stylesheet" href="css/normalize.css" type="text/css" />
     <link rel="stylesheet" href="css/responsive.css" type="text/css" />
     <link rel="stylesheet" href="css/font.css" type="text/css" />
+    <link rel="stylesheet" href="css/jquery-ui.min.css">    
     
     <link rel="shortcut icon" href="img/logo.png" type="image/png" />
 
     <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
             $('body').hide();
@@ -39,11 +41,12 @@
     <script>
         $(document).ready(function (){
             $("#apply").click(function (){
-                //$(this).animate(function(){
-                    $('html, body').animate({
+                $('html, body').animate({
                         scrollTop: $("#checklist").offset().top + 2
-                    }, 500);
-                //});
+                        //scrollTop: document.body.scrollHeight
+                }, 500);
+                $("#contact").toggle("blind", 500);
+                $("#application").toggle("blind", 500);
             });
         });
     </script>
@@ -97,6 +100,11 @@
                 <h1>Shift</h1>
                 <h2>creator space</h2>
                 <div id="title">a collaborative space and program for curious creators</div>
+                <!--<div id="social">
+                    <div id="fb"><a href="https://www.facebook.com/pages/Shift/269780036554379?ref=br_tf"></a></div>
+                    <div id="tw"><a href="https://twitter.com/_creatorspace"></a></div>
+                    <div id="ma"><a href="mailto:shift@creatorspace.co"></a></div>
+                </div>-->
                 <form action="https://docs.google.com/a/umich.edu/forms/d/1TONApqDBu04eJA8rabb35wEOA5Z7FlZw5eKrA7V13tw/formResponse" method="POST" id="ss-form" target="_blank" onsubmit=""><ol role="list" class="ss-question-list" style="padding-left: 0">
                 <div class="ss-form-question errorbox-good" role="listitem">
                 <div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry">
@@ -108,28 +116,19 @@
                 <div class="ss-item ss-navigate"><table id="navigation-table"><tbody><tr><td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
                 <input type="submit" name="submit" value="" id="ss-submit" class="jfk-button jfk-button-action " ></td>
                 </tr></tbody></table></div></ol></form>
-                <!--<button id="apply">Apply</button>-->
             </div>
         </div>
     </section>
     <section id="mission">        
         <div class="content">
             <h3></h3>
-            <p>There is a wonderstruck child in all of us.</br>
-            The bold, spontaneous, forever curious one</br>
-            that built worlds in sandboxes.</p>
+            <p>Shift is a creator space for students who want to collaborate and build</br> out their ideas, projects and ventures along with others just as passionate.</p>
 
-            <p>Yet every day, “do this, don’t do that” happens.</br>
-            We’re told to play it safe and strive for stability.</br>
-            But progress never sits still.</p>
+            <p>We run a program that is individually catered to your needs,</br> whether you’re fleshing out an idea, or already in full-swing</br> operations. It’s designed for the busy college life, so that you can</br> balance being a student and an entrepreneur.</p>
 
-            <p>That’s where Shift comes in.</br>
-            This is the creator space where you can explore,</br>
-            for yourself and for others.</p>
+            <p>Shift’s interdisciplinary community brings together people</br> of all experiences and interests to expose people to as </br>many perspectives as possible. We also connect and provide opportunities</br> with entrepreneurs, VC’s, and other industry experts that can</br> provide direction to your projects.</p>
 
-            <p>So come and discover your knack, develop your craft.</br>
-            Release your inner child and go wild.</br>
-            Let’s break the rules. Let’s be tremendous.</p>
+            <p>This is where avid creators come together to explore their curiosities,</br> build meaningful products, and have a great time doing it!</p>
         </div>
     </section>
     <section id="haus">
@@ -138,38 +137,29 @@
     </section>
     <section id="perks">
         <div class="content">
-            <h3>Creator Benefits</h3>
+            <!--<h3>Creator Benefits</h3>-->
             <ul>
-                <li><div id="clock"></div>24/7 access to our space. Wifi, food & drink all day, everyday.</li>
-                <li><div id="event"></div>Exclusive access to speakers, workshops, and other events.</li>
-                <li><div id="job"></div>Fast-track for internship and job opportunities.</li>
-                <li><div id="community"></div>A tight-knit community of people just as crazy as you are.</li>
+                <li><div id="clock"></div><h3>Space</h3>24/7 access, with wifi, food &amp; drink all day, every day. Rooms outfitted for building, thinking &amp; playing.</li>
+                <li class="padding"></li>
+                <li><div id="community"></div><h3>Community</h3>A tight-knit family of diverse creators with a lot of grit and  a little bit of spunk, for caffeine-fueled late nights.</li>
+                <li class="padding"></li>
+                <li><div id="event"></div><h3>Program</h3>A modular program developed for the busy college life. Speaker series, workshops, trips &amp; mentorship.</li>
+                <li class="padding"></li>
+                <li><div id="job"></div><h3>Resources</h3>Fast-track to job and internship opportunities, as well as gadgets to play with and other sponsored perks.</li>
             </ul>
         </div>
     </section>
     <section id="checklist">
         <div class="content">
             <h3>The Application Process</h3>
-            <ol>
-                <li><div id="space">1. Come participate in two of the following</br> Creative Sprints. Lunch will be provided at 2.</div>
-                    <div id="openhouse">
-                        <div class="left">
-                            <div class="date"><del>Tue, Sept 9, 6pm – 9pm</del></div>
-                            <!--<div id="asterisk">Open House only, no Creative Sprint</div>-->
-                            <div class="date"><del>Sun, Sept 21, 2pm – 5pm</del></div>
-                        </div>
-                        <div class="right">
-                            <div class="date">Sun, Sept 28, 2pm – 5pm</div>
-                            <div class="date">Sun, Oct 5, 2pm – 5pm</div>
-                        </div>
-                    </div></br>
-                </li>
-                <li>2. Join us for a midweek chat</li>
-                <li>3. Fill out the application anytime!</li>
-            </ol>
+            <p>Our main recruiting is now over, but we still accept Creators on a rolling basis. If you’re interested, <a href="mailto:shift@creatorspace.co">please reach out to us</a> and we’d love to have you over at the house to learn more.</p>
+            <button id="apply">Apply</button>
         </div>
     </section>
-
+    <section id="contact">
+        <div id="questions">If you’d like to learn more or get involved as a partner/sponsor, please email <a href="mailto:shift@creatorspace.co">shift@creatorspace.co</a></div>
+        <div id="copyright">&copy; 2014 Shift | creator space</div>
+    </section>
     <section id="application">
         <div id="form">
             <form action="https://docs.google.com/a/umich.edu/forms/d/17gk7Lo000ScuS7bXLho6FreCmtyfWYLYMMqbsnZ-xDs/formResponse" method="POST" id="ss-form" target="_self" onsubmit=""><ol role="list" class="ss-question-list" style="padding-left: 0">
@@ -339,7 +329,7 @@
             <input type="hidden" name="fbzx" value="6143120027491391353">
             <div class="ss-item ss-navigate"><table id="navigation-table"><tbody><tr><td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr"><input type="submit" name="submit" value="Apply" id="ss-submit"></td></tr></tbody></table></div></ol></form>
         </div> <!-- END FORM -->
-        <div id="questions">Questions? Contact <a href="mailto:shift@creatorspace.co">shift@creatorspace.co</a></div>
+        <div id="questions">If you’d like to learn more or get involved as a partner/sponsor, please email <a href="mailto:shift@creatorspace.co">shift@creatorspace.co</a></div>
         <div id="copyright">&copy; 2014 Shift | creator space</div>
     </section>
 </body>

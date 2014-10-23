@@ -37,6 +37,11 @@ h3 {
 	color : #F9F9F2;
 }
 
+a {
+	color : #F59043;
+	text-decoration : none;
+}
+
 li label {
 	height : 52px;
 }
@@ -135,7 +140,7 @@ p {
 	display : none;
 }
 
-#landing button, input[type="submit"] {
+#checklist button, input[type="submit"] {
 	font-family : 'canterlight'; 
 	font-size : 36px !important;
 	text-transform: uppercase;
@@ -190,18 +195,45 @@ input[type="submit"] {
 	background : #F59043 url("../img/arrow_cream.png") no-repeat center 10px;
 }
 
-#landing button:hover, input[type="submit"]:hover {
+#checklist button:hover, input[type="submit"]:hover {
 	background : #F59043;
 	color : #F9F9F2;
 }
 
 
-#landing button:focus, #landing button:active, #landing button.active, #landing button:focus:active {
+#checklist button:focus, #checklist button:active, #checklist button.active, #checklist button:focus:active {
 	background-image : none;
 	outline : none;
 	box-shadow : none;  
 	-webkit-box-shadow : none;
 	-moz-box-shadow : none;
+}
+
+#social {
+	width : 400px;
+}
+
+#social div {
+	margin : auto;
+	float : left;
+}
+
+#fb {
+	background : url('../img/fb.png') 0 0 no-repeat;
+	width : 26px;
+	height : 32px;
+}
+
+#tw {
+	background : url('../img/tw.png') 0 0 no-repeat;
+	width : 32px;
+	height : 45px;
+}
+
+#ma {
+	background : url('../img/ma.png') 0 0 no-repeat;
+	width : 32px;
+	height : 40px;
 }
 
 #title {
@@ -222,6 +254,10 @@ input[type="submit"] {
 #mission .content {
 	display : table-cell;
 	vertical-align : middle;
+}
+
+#mission .content p {
+	min-width : 700px;
 }
 
 #haus {
@@ -262,6 +298,10 @@ input[type="submit"] {
 	display : table;
 }
 
+#perks h3 {
+	font-size : 36px;
+}
+
 #perks .content {
 	display : table-cell;
 	vertical-align : middle;
@@ -280,9 +320,13 @@ input[type="submit"] {
 }
 
 #perks li {
-	width : 160px;
+	width : 180px;
 	display : inline-block;
 	vertical-align : top;	
+}
+
+.padding {
+	width : 20px !important;
 }
 
 #perks li, #checklist li {
@@ -315,8 +359,17 @@ input[type="submit"] {
 
 #checklist {
 	background : #F9F9F2;
+	width : 800px;
+	height : 85vh;
+	margin : auto;
+	display : table;
 	color : #474747;
 	text-align : center;
+}
+
+#checklist .content {
+	display : table-cell;
+	vertical-align : middle;
 }
 
 #checklist h3 {
@@ -361,6 +414,7 @@ input[type="submit"] {
 	background : url("../img/gray.png");	
 	height : auto;
 	margin : auto;
+	display: none;
 }
 
 #application li {
@@ -401,18 +455,23 @@ input[type="submit"] {
 	display : none;
 }
 
+#contact {
+	color : #474747;
+}
+
 #questions, #copyright {
+	width : 600px;
+	margin : auto;
 	text-align : center;	
 	padding-top : 20px;
 }
 
-#copyright {
-	padding-bottom : 20px;
+#questions {
+
 }
 
-#questions a {
-	color : #F59043;
-	text-decoration : none;
+#copyright {
+	padding-bottom : 20px;
 }
 
 @media only screen and (max-width: 1280px) {
@@ -429,6 +488,13 @@ input[type="submit"] {
 }
 
 @media only screen and (max-width: 970px) {
+	body {
+		font-size : 36px !important;
+	}
+	h3 {
+		font-size : 96px !important;
+	}
+
 	#landing {
 		height : 640px !important;
 	}
